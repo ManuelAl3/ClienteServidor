@@ -12,6 +12,7 @@ import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PagesComponent } from './pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     BreadcrumbsComponent,
     DashboardComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,

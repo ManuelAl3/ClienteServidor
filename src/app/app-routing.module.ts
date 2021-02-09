@@ -6,14 +6,21 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { PagesComponent } from './pages/pages.component';
 
 const routes:Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent },
+  {
+    path:'',
+    component: PagesComponent,
+    children:[
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'home', component: HomeComponent },
+    { path: '', pathMatch: 'full', redirectTo: '/home' }
+  ]
+  },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: '**', component: NotfoundComponent }
 ];
 

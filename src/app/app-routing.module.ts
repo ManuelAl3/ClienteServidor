@@ -1,35 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './pages/about/about.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthRoutingModule } from './auth/auth.routing';
 import { HomeComponent } from './pages/home/home.component';
-import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { PagesComponent } from './pages/pages.component';
+import { PagesRoutingModule } from './pages/pages.routing';
 
 const routes:Routes = [
-  {
-    path:'',
-    component: PagesComponent,
-    children:[
-    { path: 'dashboard', component: DashboardComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'home', component: HomeComponent },
-    { path: '', pathMatch: 'full', redirectTo: '/home' }
-  ]
-  },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: '**', component: NotfoundComponent }
+ 
 ];
 
 @NgModule({
   declarations: [],
   imports: [
+    AuthRoutingModule,
+    PagesRoutingModule,
     RouterModule.forRoot(routes)//utiliza la constante que se acaba de definir
   ],
-  exports:[//con esports se comparten los componentes en toda la app
+  exports:[//con exports se comparten los componentes en toda la app
     RouterModule
   ]
 })

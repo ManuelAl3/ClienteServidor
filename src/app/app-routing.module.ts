@@ -12,7 +12,7 @@ const routes:Routes = [
   imports: [
     AuthRoutingModule,
     PagesRoutingModule,
-    RouterModule.forRoot(routes)//utiliza la constante que se acaba de definir
+    RouterModule.forRoot(routes)//Usa la constante que se acaba de definir
   ],
   exports:[//con exports se comparten los componentes en toda la app
     RouterModule

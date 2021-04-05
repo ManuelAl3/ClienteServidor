@@ -5,6 +5,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { PagesComponent } from './pages.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { ObservableComponent } from './observable/observable.component';
 
 const routes: Routes = [
     {
@@ -14,6 +16,8 @@ const routes: Routes = [
             { path: 'home', component: HomeComponent },
             { path: 'about', component: AboutComponent },
             { path: 'dashboard', component: DashboardComponent },
+            { path: 'promesas', component: PromesasComponent },
+            { path: 'observable', component: ObservableComponent },
             { path: '', pathMatch: 'full', redirectTo: '/pages/home' }
         ]
     },

@@ -335,66 +335,10 @@
                                             </li>
                                             <li class="dropdown">
                                                 <a class="dropdown-item dropdown-toggle" href="#">
-                                                    Pages
+                                                    {{menu[0].titulo}}
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">About Us</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
-                                                            <li><a class="dropdown-item" href="about-us-basic.html">About Us - Basic</a></li>
-                                                            <li><a class="dropdown-item" href="about-me.html">About Me</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">Shop</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="shop-full-width.html">Shop - Full Width</a></li>
-                                                            <li><a class="dropdown-item" href="shop-sidebar.html">Shop - Sidebar</a></li>
-                                                            <li><a class="dropdown-item" href="shop-product-full-width.html">Shop - Product Full Width</a></li>
-                                                            <li><a class="dropdown-item" href="shop-product-sidebar.html">Shop - Product Sidebar</a></li>
-                                                            <li><a class="dropdown-item" href="shop-cart.html">Shop - Cart</a></li>
-                                                            <li><a class="dropdown-item" href="shop-login.html">Shop - Login</a></li>
-                                                            <li><a class="dropdown-item" href="shop-checkout.html">Shop - Checkout</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">Blog</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="blog-full-width.html">Blog Full Width</a></li>
-                                                            <li><a class="dropdown-item" href="blog-large-image.html">Blog Large Image</a></li>
-                                                            <li><a class="dropdown-item" href="blog-medium-image.html">Blog Medium Image</a></li>
-                                                            <li><a class="dropdown-item" href="blog-timeline.html">Blog Timeline</a></li>
-                                                            <li><a class="dropdown-item" href="blog-post.html">Single Post</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">Layouts</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="page-full-width.html">Full Width</a></li>
-                                                            <li><a class="dropdown-item" href="page-left-sidebar.html">Left Sidebar</a></li>
-                                                            <li><a class="dropdown-item" href="page-right-sidebar.html">Right Sidebar</a></li>
-                                                            <li><a class="dropdown-item" href="page-left-and-right-sidebars.html">Left and Right Sidebars</a></li>
-                                                            <li><a class="dropdown-item" href="page-sticky-sidebar.html">Sticky Sidebar</a></li>
-                                                            <li><a class="dropdown-item" href="page-secondary-navbar.html">Secondary Navbar</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a class="dropdown-item" href="#">Extra</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="page-404.html">404 Error</a></li>
-                                                            <li><a class="dropdown-item" href="page-coming-soon.html">Coming Soon</a></li>
-                                                            <li><a class="dropdown-item" href="page-maintenance-mode.html">Maintenance Mode</a></li>
-                                                            <li><a class="dropdown-item" href="sitemap.html">Sitemap</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="page-custom-header.html">Custom Header</a></li>
-                                                    <li><a class="dropdown-item" href="page-team.html">Team</a></li>
-                                                    <li><a class="dropdown-item" href="page-services.html">Services</a></li>
-                                                    <li><a class="dropdown-item" href="page-careers.html">Careers</a></li>
-                                                    <li><a class="dropdown-item" href="page-our-office.html">Our Office</a></li>
-                                                    <li><a class="dropdown-item" href="page-faq.html">FAQ</a></li>
-                                                    <li><a class="dropdown-item" href="page-login.html">Login / Register</a></li>
+                                                    <li *ngFor="let subMenu of menu[0].subMenus"><a class="dropdown-item" href="{{subMenu.url}}">{{subMenu.titulo}}</a></li>                                               
                                                 </ul>
                                             </li>
                                             <li class="dropdown">

@@ -12,15 +12,15 @@ export class MenuService {
       subMenus: [
         {
           titulo: "Home",
-          url:"/home"
+          url:"/pages/home"
         },
         {
           titulo: "About",
-          url: "/about"
+          url: "/pages/about"
         },
         {
           titulo: "Dashboard",
-          url: "/dashboard"
+          url: "/pages/dashboard"
         },
       ]
     }

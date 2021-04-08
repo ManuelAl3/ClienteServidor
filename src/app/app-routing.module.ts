@@ -4,7 +4,6 @@ import { AuthRoutingModule } from './auth/auth.routing';
 import { HomeComponent } from './pages/home/home.component';
 import { PagesComponent } from './pages/pages.component';
 import { PagesRoutingModule } from './pages/pages.routing';
-import { PromesasComponent } from './pages/promesas/promesas.component';
 
 const routes:Routes = [
   {

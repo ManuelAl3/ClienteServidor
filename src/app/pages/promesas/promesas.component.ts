@@ -53,10 +53,22 @@ export class PromesasComponent implements OnInit {
 
   }
 
+  getNest() {//Parte Asincrona
+    const promesa = new Promise(resolve =>{
+      fetch('https://a-proyecto.herokuapp.com')//ruta
+      .then(res => res.json())
+      .then(res => resolve(res.data))
+    });
+    
+    return promesa;
+
+  }
+
   /*getUsuarios2() {//Parte Sincrona
     fetch('https://reqres.in/api/users').then(res => {
       console.log(res.json())
     })
   }*/
+  
 
 }

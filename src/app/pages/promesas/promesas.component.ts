@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromesasComponent implements OnInit {
   usuarios: any;
+ 
 
   constructor() {}
 
@@ -16,6 +17,11 @@ export class PromesasComponent implements OnInit {
       this.usuarios = datosUsuario;
       console.log(datosUsuario);
     });
+
+    this.getNest().then(linkNest => {
+      return linkNest;
+    });
+
     //this.getUsuarios2();
 
     /*const promesa = new Promise((resolve, reject) => {
@@ -54,13 +60,13 @@ export class PromesasComponent implements OnInit {
   }
 
   getNest() {//Parte Asincrona
-    const promesa = new Promise(resolve =>{
+    const nest = new Promise(resolve =>{
       fetch('https://a-proyecto.herokuapp.com')//ruta
       .then(res => res.json())
-      .then(res => resolve(res.data))
+      .then(res => resolve(res))
     });
     
-    return promesa;
+    return nest;
 
   }
 

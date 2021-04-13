@@ -16,7 +16,7 @@ const routes: Routes = [
             { path: 'home', component: HomeComponent },
             { path: 'about', component: AboutComponent },
             { path: 'dashboard', component: DashboardComponent },
-            { path: 'promesas', component: PromesasComponent },
+            { path: 'usuarios', component: PromesasComponent },
             { path: 'observable', component: ObservableComponent },
             { path: '', pathMatch: 'full', redirectTo: '/pages/home' }
         ]
